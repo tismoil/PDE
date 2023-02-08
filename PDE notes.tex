@@ -1,0 +1,221 @@
+\documentclass[a4paper, 12pt, twoside, reqno,]{amsart}
+\numberwithin{equation}{section}
+\usepackage[foot]{amsaddr}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsfonts}
+% \usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\setlist[enumerate]{label=\textnormal(\roman*\textnormal)}
+\usepackage{fancyhdr}
+% \usepackage[russian, english]{babel}
+% \usepackage[fixlanguage]{babelbib}
+\usepackage[toc,page]{appendix}
+\usepackage{dirtytalk}
+\usepackage{indentfirst}
+\usepackage{mathrsfs}
+\usepackage{fix-cm}   
+\usepackage{float}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+\urlstyle{same}
+
+
+%% For figures and captions
+\usepackage{caption}
+\usepackage{subcaption}
+\counterwithin{figure}{section}
+\renewcommand{\figurename}{Chizma}
+% \captionsetup[subfigure]{margin=0pt, labelfont=normalfont}
+% \captionsetup[figure]{width=0.85\linewidth}
+%%
+
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage{hyphenat}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{xpatch}
+\usepackage{afterpage}
+\usepackage{faktor}
+
+\setlength{\footskip}{14.0pt}
+
+
+
+\hyphenation{uning}
+\hyphenation{juft}
+
+\makeatletter
+\renewenvironment{proof}[1][Isbot]{\par
+  \pushQED{\qed}%
+  \normalfont \topsep6\p@\@plus6\p@\relax
+  \trivlist
+  \item[%
+    \hskip\labelsep
+    \normalfont\bfseries % was \itshape
+    #1%
+    \@addpunct{.}% remove this if you don't want punctuation
+  ]\ignorespaces
+}{%
+  \popQED\endtrivlist\@endpefalse
+}
+% \let\qed\relax % avoid a warning
+% \DeclareRobustCommand{\qed}{%
+%   \ifmmode \mathqed
+%   \else
+%     \leavevmode\unskip\penalty\@M\hbox{}\nobreak\hspace{.5em minus .1em}% was \hfill
+%     \hbox{\qedsymbol}%
+%   \fi}
+\makeatother
+\let\latexchi\chi
+\makeatletter
+\renewcommand\chi{\@ifnextchar_\sub@chi\latexchi}
+\newcommand{\sub@chi}[2]{% #1 is _, #2 is the subscript
+  \@ifnextchar^{\subsup@chi{#2}}{\latexchi^{}_{#2}}%
+}
+\newcommand{\subsup@chi}[3]{% #1 is the subscript, #2 is ^, #3 is the superscript
+  \latexchi_{#1}^{#3}%
+}
+\makeatother
+
+
+
+
+
+
+
+
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{proposition}[theorem]{Tasdiq}
+\newtheorem{corollary}[theorem]{Natija}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{example}{Misol}[section]
+
+
+\theoremstyle{definition}
+\newtheorem{definition}{Ta'rif}[section]
+\newtheorem*{remark}{\textbf{Remark}}
+
+
+\DeclareMathOperator{\sign}{sign}
+\renewcommand{\epsilon}{\varepsilon}
+\raggedbottom
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\rn}{{\mathbb{R}^{n}}}
+\newcommand{\zn}{{\mathbb{Z}^n}}
+\newcommand{\sn}{{\mathbb{S}^{n-1}}}
+\newcommand{\tn}{{\mathbb{T}^n}}
+
+\newcommand{\intrn}{\int_{\rn}}
+\newcommand{\fhat}{\widehat{f}}
+\renewcommand{\r}{\mathbb{R}}
+\renewcommand{\t}{\mathbb{T}}
+\newcommand{\z}{\mathbb{Z}}
+\newcommand{\q}{\mathbb{Q}}
+\renewcommand{\c}{\mathbb{C}}
+\newcommand{\sumintk}{\sum_{k\in \z}}
+\newcommand{\sumintn}{\sum_{n\in \z}}
+\newcommand{\sumintl}{\sum_{l\in \z}}
+\newcommand{\sumintm}{\sum_{m\in \z}}
+
+\newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
+
+\newcommand\lpr[1]{L^{#1}(\r)}
+\newcommand\lpwr[1]{L^{#1}_{weak}(\r)}
+\newcommand\lprn[1]{L^{#1}(\rn)}
+\newcommand\lpwrn[1]{L^{#1}_{weak}(\rn)}
+\newcommand\lpsn[1]{L^{#1}(\sn)}
+\newcommand\wkp[1]{W^{{#1}}(\rn)}
+\DeclareMathOperator*{\esssup}{ess\,sup}
+
+
+
+\allowdisplaybreaks 
+
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[CE]{\scshape \small\nouppercase}
+\fancyhead[CO]{\scshape \small {T.Ismoilov}}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14.62pt}
+
+\fancypagestyle{plain}{
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\thepage}
+\fancyhead{}
+}
+
+
+\usepackage{xpatch}
+\makeatletter
+\xapptocmd{\@sect}{\csname #1mark\endcsname{#7}}{}{}
+\makeatother  
+
+
+
+\makeatletter   
+\xpatchcmd{\@tocline}{\hfil\hbox to\@pnumwidth{\@tocpagenum{#7}}\par}
+{\ifnum#1<0\hfill\else\dotfill\fi\hbox to\@pnumwidth{\@tocpagenum{#7}}\par}
+{}{}
+\makeatother    
+% *******************************************   
+
+\makeatletter
+ \def\l@subsection{\@tocline{2}{0pt}{3pc}{6pc}{}}
+\def\l@subsubsection{\@tocline{3}{0pt}{8pc}{8pc}{}}
+ \makeatother
+
+\hypersetup{}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
+
+
+\title{PDE Notes}
+\author[T.Ismoilov]{Tolibjon Ismoilov}
+\date{\today}
+\email{tolibjon.iismoilov@gmail.com}
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+% \afterpage{\blankpage}
+% \listoffigures
+
+
+\include{Section1.tex}
+\include{Section2.tex}
+% \include{Section3.tex}
+% \include{Section4.tex}
+% \include{Section5.tex}
+
+
+% \nocite{grafakos}
+% \nocite{stein2003fourier}
+% \nocite{stein2009real}
+
+\bibliographystyle{abbrv}
+\bibliography{references}\thispagestyle{plain}
+
+\end{document}
