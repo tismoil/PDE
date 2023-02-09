@@ -1,0 +1,165 @@
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdfpagemode=FullScreen,
+    }
+\urlstyle{same}
+
+
+%% For figures and captions
+\usepackage{caption}
+\usepackage{subcaption}
+\counterwithin{figure}{section}
+\renewcommand{\figurename}{Chizma}
+% \captionsetup[subfigure]{margin=0pt, labelfont=normalfont}
+% \captionsetup[figure]{width=0.85\linewidth}
+%%
+
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage{hyphenat}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{xpatch}
+\usepackage{afterpage}
+\usepackage{faktor}
+
+\setlength{\footskip}{14.0pt}
+
+
+
+\hyphenation{uning}
+\hyphenation{juft}
+
+\makeatletter
+\renewenvironment{proof}[1][Isbot]{\par
+  \pushQED{\qed}%
+  \normalfont \topsep6\p@\@plus6\p@\relax
+  \trivlist
+  \item[%
+    \hskip\labelsep
+    \normalfont\bfseries % was \itshape
+    #1%
+    \@addpunct{.}% remove this if you don't want punctuation
+  ]\ignorespaces
+}{%
+  \popQED\endtrivlist\@endpefalse
+}
+% \let\qed\relax % avoid a warning
+% \DeclareRobustCommand{\qed}{%
+%   \ifmmode \mathqed
+%   \else
+%     \leavevmode\unskip\penalty\@M\hbox{}\nobreak\hspace{.5em minus .1em}% was \hfill
+%     \hbox{\qedsymbol}%
+%   \fi}
+\makeatother
+\let\latexchi\chi
+\makeatletter
+\renewcommand\chi{\@ifnextchar_\sub@chi\latexchi}
+\newcommand{\sub@chi}[2]{% #1 is _, #2 is the subscript
+  \@ifnextchar^{\subsup@chi{#2}}{\latexchi^{}_{#2}}%
+}
+\newcommand{\subsup@chi}[3]{% #1 is the subscript, #2 is ^, #3 is the superscript
+  \latexchi_{#1}^{#3}%
+}
+\makeatother
+
+
+
+
+
+
+
+
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{proposition}[theorem]{Tasdiq}
+\newtheorem{corollary}[theorem]{Natija}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{example}{Misol}[section]
+
+
+\theoremstyle{definition}
+\newtheorem{definition}{Ta'rif}[section]
+\newtheorem*{remark}{\textbf{Remark}}
+
+
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\supp}{supp}
+\renewcommand{\epsilon}{\varepsilon}
+\raggedbottom
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\rd}{{\mathbb{R}^{d}}}
+\newcommand{\zd}{{\mathbb{Z}^d}}
+\newcommand{\sd}{{\mathbb{S}^{d-1}}}
+\newcommand{\td}{{\mathbb{T}^d}}
+
+\newcommand{\intrd}{\int_{\rd}}
+\newcommand{\fhat}{\widehat{f}}
+\renewcommand{\r}{\mathbb{R}}
+\renewcommand{\t}{\mathbb{T}}
+\newcommand{\z}{\mathbb{Z}}
+\newcommand{\q}{\mathbb{Q}}
+\renewcommand{\c}{\mathbb{C}}
+\newcommand{\sumintk}{\sum_{k\in \z}}
+\newcommand{\sumintn}{\sum_{n\in \z}}
+\newcommand{\sumintl}{\sum_{l\in \z}}
+\newcommand{\sumintm}{\sum_{m\in \z}}
+
+\newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
+
+\newcommand\lpr[1]{L^{#1}(\r)}
+\newcommand\lpwr[1]{L^{#1}_{weak}(\r)}
+\newcommand\lprn[1]{L^{#1}(\rn)}
+\newcommand\lpwrd[1]{L^{#1}_{weak}(\rn)}
+\newcommand\lpsd[1]{L^{#1}(\sd)}
+\newcommand\wkprd[2]{W^{{#1},{#2}}(\rd)}
+\DeclareMathOperator*{\esssup}{ess\,sup}
+
+
+
+\allowdisplaybreaks 
+
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[CE]{\scshape \small\nouppercase}
+\fancyhead[CO]{\scshape \small {T.Ismoilov}}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14.62pt}
+
+\fancypagestyle{plain}{
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\thepage}
+\fancyhead{}
+}
+
+
+\usepackage{xpatch}
+\makeatletter
+\xapptocmd{\@sect}{\csname #1mark\endcsname{#7}}{}{}
+\makeatother  
+
+
+
+\makeatletter   
+\xpatchcmd{\@tocline}{\hfil\hbox to\@pnumwidth{\@tocpagenum{#7}}\par}
+{\ifnum#1<0\hfill\else\dotfill\fi\hbox to\@pnumwidth{\@tocpagenum{#7}}\par}
+{}{}
+\makeatother    
+% *******************************************   
+
+\makeatletter
+ \def\l@subsection{\@tocline{2}{0pt}{3pc}{6pc}{}}
+\def\l@subsubsection{\@tocline{3}{0pt}{8pc}{8pc}{}}
+ \makeatother
+
+\hypersetup{}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}

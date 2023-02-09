@@ -5,26 +5,37 @@
     (yohud umumlashgan funksiyalar nazariyasi)
 \end{center}
 
-\subsection{Spcae of test functions}
+\subsection{Space of test functions}
 \textbf{Test funksiyalar fazolari}
 
-Ushbu bo`limda biz ixtiyoriy $\Omega\subseteq \rn$ ochiq to`plam uchun bir nechta funksiyanal fazolarni qaraymiz. $\Omega=\rn$ bo`lgan hollarda biz ayrim belgilashlarda shunchaki $\rn$ tushurib ketamiz. 
+Ushbu bo`limda biz ixtiyoriy $\Omega\subseteq \rd$ ochiq to`plam uchun bir nechta funksiyanal fazolarni qaraymiz. $\Omega=\rd$ bo`lgan hollarda biz ayrim belgilashlarda shunchaki $\rd$ tushurib ketamiz. 
 
 \begin{definition}
-    $f:\Omega \rightarrow \c $ funksiyaning \colorbox{green}{supporti} \textit{dastagi} deb
+    $f:\Omega \rightarrow \c $ funksiyaning \colorbox{green}{supporti} \emph{dastagi} deb
     \begin{align}
         \left\{x\in \Omega: f(x)=0  \right\}
     \end{align}
-    to`plamning $\rn$ fazodagi \colorbox{green}{yopilmasiga} aytiladi va $\operatorname{supp}f$ bilan belgilanadi. 
+    to`plamning $\rd$ fazodagi \colorbox{green}{yopilmasiga} aytiladi va $\supp(f)$ bilan belgilanadi. 
 
-    Agar $\operatorname{supp}f$ kompakt to`plam bo`lsa, $f$ funkisya \textit{kompakt dastakli} deb ataladi.
+    Agar $\supp(f)$ kompakt to`plam bo`lsa, $f$ funkisya \emph{kompakt dastakli} deb ataladi.
 \end{definition}
 
-Istalgan $k\ge 0$ butun son uchun $\Omega\subseteq\rn$ to`plamda quyidagi funksiyalar sinflarini qaraymiz.
+Istalgan $n\ge 0$ butun son uchun $\Omega\subseteq\rd$ to`plamda quyidagi funksiyalar sinflarini qaraymiz.
 
 \begin{enumerate}
-    \item $\mathscr{E}^k(\Omega)=\left\{f:\Omega\rightarrow \c\,  \left|\right. f\in C^k(\Omega)\right\}$ ya'ni $k$ marta uzliksiz differensiallanuvchi funk\-si\-yalar to`plami. Agar $k=0$ bo`lsa, $\mathscr{E}^0(\Omega)$ shunchaki uzliksiz funkiyalar to`plamini anglatadi.
+    \item $\mathscr{E}^n(\Omega)=\left\{f:\Omega\rightarrow \c\,  \left|\right. f\in C^n(\Omega)\right\}$ ya'ni $k$ marta uzliksiz differensiallanuvchi funk\-si\-yalar to`plami. Agar $n=0$ bo`lsa, $\mathscr{E}^0(\Omega)$ bilan $\Omega$ to`plamda aniqlangan uzliksiz funkiyalar to`plamini belgilab olamiz.
+    \item $\mathscr{E}(\Omega)$ bilan $\Omega$ to`plamda aniqlangan \emph{silliq} funksiyalar sinfini belgilab olamiz, ya'ni:
     \begin{align}
-        \mathscr{E}^\infty(\Omega)=\bigcap\limits_{k=0}^{\infty}\mathscr{E}^k(\Omega)
+        \mathscr{E}(\Omega)=\bigcap\limits_{n=0}^{\infty}\mathscr{E}^n(\Omega)
     \end{align}
+    \item Aylaylik $K\subset \Omega\subseteq \rd$ kompakt to`plam, $\mathscr{D}_K^n(\Omega)$ va $\mathscr{D}_K(\Omega)$ sinflarni quyidagicha aniq\-lay\-miz
+    \begin{align}
+        \mathscr{D}_K^n(\Omega)&=\left\{f\in\mathscr{E}^k(\Omega)\;  \left| \;\; \supp(f)\subseteq K \right. \right\}\\
+        \mathscr{D}_K(\Omega)&=\left\{f\in\mathscr{E}(\Omega)\;  \left| \;\; \supp(f)\subseteq K \right. \right\}=\bigcap\limits_{n=0}^{\infty}\mathscr{D}_K^n(\Omega)
+    \end{align}
+    \item $\mathscr{K}(\Omega)$ esa $\Omega$ to`plamning barcha kompakt qism-to`plamlari sinfini belgilasin. $\mathscr{D}(\Omega)$ bilan $\Omega$ to`plamda aniqlangan kompakt dastakli silliq funsiyalar sinfini belgilaymiz.
+    \begin{equation}
+        \mathscr{D}(\Omega)=\bigcup\limits_{K\in\mathscr{K}(\Omega)}\mathscr{D}_K(\Omega)
+    \end{equation}
 \end{enumerate}
+Ha dastlab bu funksiyalar sinflari juda abstrakt va juda kichik sinflar bo`lib tuyilishi mumkin. Lekin aslida bu
