@@ -1,4 +1,4 @@
-\documentclass[a4paper, 12pt, twoside, reqno,]{amsart}
+\documentclass[a4paper, 12pt, twoside, reqno]{amsart}
 \numberwithin{equation}{section}
 \usepackage[foot]{amsaddr}
 \usepackage[utf8]{inputenc}
@@ -12,7 +12,7 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{enumitem}
-\setlist[enumerate]{label=\textnormal(\roman*\textnormal)}
+\setlist[enumerate]{label=\textnormal(\emph{\roman*}\textnormal)}
 \usepackage{fancyhdr}
 % \usepackage[russian, english]{babel}
 % \usepackage[fixlanguage]{babelbib}
@@ -41,7 +41,7 @@
 
 \include{Section1.tex}
 \include{Section2.tex}
-% \include{Section3.tex}
+\include{Section3.tex}
 % \include{Section4.tex}
 % \include{Section5.tex}
 

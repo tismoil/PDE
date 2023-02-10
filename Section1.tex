@@ -22,7 +22,7 @@ Ushbu bo`limda biz ixtiyoriy $\Omega\subseteq \rd$ ochiq to`plam uchun bir necht
 
 Istalgan $n\ge 0$ butun son uchun $\Omega\subseteq\rd$ to`plamda quyidagi funksiyalar sinflarini qaraymiz.
 
-\begin{enumerate}
+\begin{enumerate}[label=\textnormal(\emph{\roman*}\textnormal)]
     \item $\mathscr{E}^n(\Omega)=\left\{f:\Omega\rightarrow \c\,  \left|\right. f\in C^n(\Omega)\right\}$ ya'ni $k$ marta uzliksiz differensiallanuvchi funk\-si\-yalar to`plami. Agar $n=0$ bo`lsa, $\mathscr{E}^0(\Omega)$ bilan $\Omega$ to`plamda aniqlangan uzliksiz funkiyalar to`plamini belgilab olamiz.
     \item $\mathscr{E}(\Omega)$ bilan $\Omega$ to`plamda aniqlangan \emph{silliq} funksiyalar sinfini belgilab olamiz, ya'ni:
     \begin{align}
@@ -38,4 +38,68 @@ Istalgan $n\ge 0$ butun son uchun $\Omega\subseteq\rd$ to`plamda quyidagi funksi
         \mathscr{D}(\Omega)=\bigcup\limits_{K\in\mathscr{K}(\Omega)}\mathscr{D}_K(\Omega)
     \end{equation}
 \end{enumerate}
-Ha dastlab bu funksiyalar sinflari juda abstrakt va juda kichik sinflar bo`lib tuyilishi mumkin. Lekin aslida bu
+Ha dastlab bu funksiyalar sinflari juda abstrakt va juda kichik sinflar bo`lib tuyilishi mumkin. Lekin aslida bu sinflar biz bilgan $L^{p}(\Omega)$ fazolarda zich va bunday funksiyalar yordamida biz juda ko`p hossalarni isbotlashimiz mumkin. 
+
+\begin{example}
+    \begin{enumerate}
+        \item $d=1$ va $\Omega=\r$ bo`lgan holatni qaraylik. Quyidagicha aniqlangan $g:\r\rightarrow \r$ funksiyani qaraylik:
+        \begin{equation}
+            g(x)=\left\{\begin{aligned}
+                \exp\left(-\frac{1}{1-\lvert x\rvert^2}\right)&, & \textnormal{ agar } & \lvert x\rvert <1 \\
+                 0 &, & \textnormal{ agar } & \lvert x\rvert \ge 1.
+            \end{aligned}\right. 
+        \end{equation} 
+    To`g`ri birinchi bor bunday funksiyani tasavvur qilish, va uni nima sababdan biz bu funksiyani qarashimiz kerakligini anglab olish qiyin lekin ozgina fikr yuritib ushbu funksiya qanday hossalarga ega ekanligini ko`rish mumkin. Keling shu yerda ushbu funksiya grafigini qaraylik
+    
+    \noindent
+    \begin{minipage}{0.89\textwidth}
+    \begin{minipage}[b]{0.5\textwidth}
+    O`ng tomondagi grafikdan shuni ko`\-ri\-shi\-miz mumkinki $g$ kom\-pakt das\-tak\-li funksiya va $\supp(g)=[-1,1]$. Hosila ta'rifidan foydalanib $g$ funk\-si\-ya $-1$ va $1$ nuq\-ta\-lar\-da ham cheksiz ko`p ma\-ro\-ta\-ba dif\-fe\-ren\-si\-al\-la\-nuv\-chi bo`\-li\-shi\-ni ko`rish mumkin. Bundan ko`rinadiki 
+    \begin{align*} 
+        g\in \mathscr{D}(\r)\subset\mathscr{E}(\r)
+    \end{align*}
+    \end{minipage}
+    \hspace{0.02\textwidth}
+    \begin{minipage}[b]{0.45\textwidth}
+        \begin{figure}[H]
+            \centering
+            \begin{tikzpicture}
+            \pgfplotsset{width=\textwidth, height=5cm}
+            \begin{axis}[clip=false,
+            axis lines=middle,
+            xmin=-2, xmax=2,
+            ymin=-0.65, ymax=0.65,
+            xtick={0, 1,-1,-0.5,0.5},    
+            xticklabels={$0$, $1$, $-1$, $-\frac{1}{2}$, $\frac{1}{2}$},
+            ytick={0.5,-0.5},
+            yticklabels={$\frac{1}{2}$, $-\frac{1}{2}$},
+            xticklabel style={anchor=north, font=\scriptsize},
+            yticklabel style={font=\small},
+            xlabel=$x$, ylabel=$g$, xlabel style={anchor=west}, ylabel style={anchor=south},
+            xmajorgrids=true,
+            grid style=dashed,
+            legend entries={$g$}
+            ]
+            \addplot[color=blue,domain=-0.9999:0.9999]{exp((-1)/(1-x*x))};
+            \addplot[color=blue,domain=-2:-0.9999]{0};
+            \addplot[color=blue,domain=0.9999:2]{0};
+            \end{axis}
+        \end{tikzpicture}
+            \label{fig:convkernel}
+        
+        \end{figure}
+        \break
+        \break
+    \end{minipage}
+    \end{minipage}
+\break
+Yuqorida aniqlangan $g$ funksiya yordamida biz juda ko`p kompakt dastakli sil\-liq funksiyalar hosil qila olamiz. Masalan, $f(x)=\sin(x)\cdot g(x)\in\mathscr{D}(\r)$. Yoki istalgan silliq funksiyani $g(x)$ ga ko`paytirish orqali biz $\mathscr{D}(\r)$ sinfga tegishli funksiya hosil qilamiz.
+\item Aytaylik $d\ge 1$ istalgan ixtiyoriy butun son bo`lsin. Yuqoridagi $g$ funksiyaning $\rd$ fazoda ham \colorbox{green}{analogi} mavjud va uni soddagina 
+\begin{align*}
+    \rd \ni x\longmapsto g\left(\lVert x\rVert\right)
+\end{align*}
+kabi aniqlashimiz mumkin. Bu funksiyaning dastagi ese $\overline{B_1(0)}$---birlik yopiq shar bo`ladi.
+\end{enumerate}
+\end{example}
+
+ 
