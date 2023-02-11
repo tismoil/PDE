@@ -30,9 +30,6 @@
 
 
 
-\hyphenation{uning}
-\hyphenation{juft}
-
 \makeatletter
 \renewenvironment{proof}[1][Isbot]{\par
   \pushQED{\qed}%
@@ -87,9 +84,12 @@
 
 \DeclareMathOperator{\sign}{sign}
 \DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator*{\esssup}{ess\,sup}
 \renewcommand{\epsilon}{\varepsilon}
-\raggedbottom
 \renewcommand{\qedsymbol}{$\blacksquare$}
+\raggedbottom
+
+
 \newcommand{\rd}{{\mathbb{R}^{d}}}
 \newcommand{\zd}{{\mathbb{Z}^d}}
 \newcommand{\sd}{{\mathbb{S}^{d-1}}}
@@ -97,11 +97,15 @@
 
 \newcommand{\intrd}{\int_{\rd}}
 \newcommand{\fhat}{\widehat{f}}
-\renewcommand{\r}{\mathbb{R}}
-\renewcommand{\t}{\mathbb{T}}
+
 \newcommand{\z}{\mathbb{Z}}
 \newcommand{\q}{\mathbb{Q}}
+
+\renewcommand{\r}{\mathbb{R}}
+\renewcommand{\t}{\mathbb{T}}
 \renewcommand{\c}{\mathbb{C}}
+
+
 \newcommand{\sumintk}{\sum_{k\in \z}}
 \newcommand{\sumintn}{\sum_{n\in \z}}
 \newcommand{\sumintl}{\sum_{l\in \z}}
@@ -115,7 +119,7 @@
 \newcommand\lpwrd[1]{L^{#1}_{weak}(\rn)}
 \newcommand\lpsd[1]{L^{#1}(\sd)}
 \newcommand\wkprd[2]{W^{{#1},{#2}}(\rd)}
-\DeclareMathOperator*{\esssup}{ess\,sup}
+
 
 
 
@@ -125,7 +129,7 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[CE]{\scshape \small\nouppercase}
+\fancyhead[CE]{\scshape \small\nouppercase {Partial Differential Equations}}
 \fancyhead[CO]{\scshape \small {T.Ismoilov}}
 \fancyfoot[C]{\thepage}
 \setlength{\headheight}{14.62pt}

@@ -1,5 +1,6 @@
-\documentclass[a4paper, 12pt, twoside, reqno]{amsart}
+\documentclass[a4paper, 12pt, twoside, reqno,]{amsart}
 \numberwithin{equation}{section}
+
 \usepackage[foot]{amsaddr}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -20,9 +21,9 @@
 \usepackage{dirtytalk}
 \usepackage{indentfirst}
 \usepackage{mathrsfs}
+\usepackage{cleveref}
 \usepackage{fix-cm}   
 \usepackage{float}
-\usepackage{cleveref}
 \usepackage{mytexstyle}
 
 
@@ -46,9 +47,12 @@
 % \include{Section5.tex}
 
 
-% \nocite{grafakos}
+
+
+\nocite{evans_pde}
 % \nocite{stein2003fourier}
 % \nocite{stein2009real}
+
 
 \bibliographystyle{abbrv}
 \bibliography{references}\thispagestyle{plain}
