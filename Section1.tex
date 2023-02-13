@@ -11,11 +11,11 @@
 Ushbu bo`limda biz ixtiyoriy $\Omega\subseteq \rd$ ochiq to`plam uchun bir nechta funksiyanal fazolarni qaraymiz. $\Omega=\rd$ bo`lgan hollarda biz ayrim belgilashlarda shunchaki $\rd$ tushurib ketamiz. 
 
 \begin{definition}
-    $f:\Omega \rightarrow \c $ funksiyaning \colorbox{green}{supporti} \emph{dastagi} deb
+    $f:\Omega \rightarrow \c $ funksiyaning (\textcolor{red}{supporti}) \emph{dastagi} deb
     \begin{align}
         \left\{x\in \Omega: f(x)=0  \right\}
     \end{align}
-    to`plamning $\rd$ fazodagi \colorbox{green}{yopilmasiga} aytiladi va $\supp(f)$ bilan belgilanadi. 
+    to`plamning $\rd$ fazodagi \textcolor{red}{yopilmasiga} aytiladi va $\supp(f)$ bilan belgilanadi. 
 
     Agar $\supp(f)$ kompakt to`plam bo`lsa, $f$ funkisya \emph{kompakt dastakli} deb ataladi.
 \end{definition}
@@ -43,15 +43,14 @@ Ha dastlab bu funksiyalar sinflari juda abstrakt va juda kichik sinflar bo`lib t
 \begin{example}
     \begin{enumerate}
         \item $d=1$ va $\Omega=\r$ bo`lgan holatni qaraylik. Quyidagicha aniqlangan $g:\r\rightarrow \r$ funksiyani qaraylik:
-        \begin{equation}
+    \begin{equation}
             g(x)=\left\{\begin{aligned}
                 \exp\left(-\frac{1}{1-\lvert x\rvert^2}\right)&, & \textnormal{ agar } & \lvert x\rvert <1 \\
                  0 &, & \textnormal{ agar } & \lvert x\rvert \ge 1.
             \end{aligned}\right. 
-        \end{equation} 
-    To`g`ri birinchi bor bunday funksiyani tasavvur qilish, va uni nima sababdan biz bu funksiyani qarashimiz kerakligini anglab olish qiyin lekin ozgina fikr yuritib ushbu funksiya qanday hossalarga ega ekanligini ko`rish mumkin. Keling shu yerda ushbu funksiya grafigini qaraylik \hfill \break
-
-\noindent
+    \end{equation}
+    To`g`ri birinchi bor bunday funksiyani tasavvur qilish, va uni nima sa\-bab\-dan biz bu funksiyani qarashimiz kerakligini anglab olish qiyin lekin ozgina fikr yu\-ri\-tib ushbu funksiya qanday hossalarga ega ekanligini ko`rish mumkin. Keling shu yer\-da ushbu funksiya grafigini qaraylik. \par
+    \noindent 
     \begin{minipage}{0.89\textwidth}
     \begin{minipage}[b]{0.5\textwidth}
     O`ng tomondagi grafikdan shuni ko`\-ri\-shi\-miz mumkinki $g$ kom\-pakt das\-tak\-li funksiya va $\supp(g)=[-1,1]$. Hosila ta'rifidan foydalanib $g$ funk\-si\-ya $-1$ va $1$ nuq\-ta\-lar\-da ham cheksiz ko`p ma\-ro\-ta\-ba dif\-fe\-ren\-si\-al\-la\-nuv\-chi bo`\-li\-shi\-ni ko`rish mumkin. Bundan ko`rinadiki 
@@ -92,11 +91,23 @@ Ha dastlab bu funksiyalar sinflari juda abstrakt va juda kichik sinflar bo`lib t
     \end{minipage}
 \break
 Yuqorida aniqlangan $g$ funksiya yordamida biz juda ko`p kompakt dastakli sil\-liq funksiyalar hosil qila olamiz. Masalan, $f(x)=\sin(x)\cdot g(x)\in\mathscr{D}(\r)$. Yoki istalgan silliq funksiyani $g(x)$ ga ko`paytirish orqali biz $\mathscr{D}(\r)$ sinfga tegishli funksiya hosil qilamiz.
-\item Aytaylik $d\ge 1$ istalgan ixtiyoriy butun son bo`lsin. Yuqoridagi $g$ funksiyaning $\rd$ fazoda ham \colorbox{green}{analogi} mavjud va uni soddagina 
-\begin{align*}
+
+\item Aytaylik $d\ge 1$ ixtiyoriy butun son bo`lsin. Yuqoridagi $g$ funksiyaning $\rd$ fazoda ham \textcolor{red}{analogi} mavjud va uni soddagina 
+\begin{equation*}
     \rd \ni x\longmapsto g\left(\lVert x\rVert\right)
-\end{align*}
+\end{equation*}
 kabi aniqlashimiz mumkin. Bu funksiyaning dastagi ese $\overline{B_1(0)}$---birlik yopiq shar bo`ladi.
+
+\item (\emph{Gaussian}) $g_\alpha : \rd \mapsto \r$ $(d\ge1)$ quyidagicha aniqlangan bo`lsin 
+\begin{equation*}
+    g_\alpha(x)=e^{-\alpha \lvert x\rvert^2}, \quad (\alpha>0).
+\end{equation*}
+Albatta bu funksiya kompakt dastakli emas, lekin $g_\alpha \in\mathscr{E}(\rd)$. Keyinchalik biz bu funksiyalar Furye transform bilan bog`liq ajoyib hossalarga ega ekanligini ko`\-ri\-shi\-miz mumkin. Aytish lozim bo`lgan yana bir jihati shunda-ki, $g_\alpha$ va uning barcha hosilalari $\lvert x\rvert \to \infty$  bo`lganda, ixtiyoriy ratsional funksiyaga nisbatan kuchliroq $0$ ga yaqinlashadi. Buni quyidagicha ifodalash mumkin,
+\begin{equation*}
+    \sup\limits_{x\in\rd} \lvert x^\beta \partial^\gamma g_\alpha(x)\rvert \le C_{\beta,\gamma} \footnotemark
+\end{equation*}
+\footnotetext{$\beta=(\beta_1,\beta_2,...,\beta_d) \in \mathbb{N}_0^d$ bo`lsa $x^\beta=x_1^{\beta_1}\cdots  x_d^{\beta_d}$ va $\partial^\beta=\frac{\partial^{\beta_1+\beta_2+...+\beta_d}}{\partial_{x_1}^{\beta_1}\partial_{x_2}^{\beta_2}\cdots \partial_{x_d}^{\beta_d}}$}
+ixtiyoriy $\beta, \gamma\in \mathbb{N}_0^d$, multiindekslar uchun. 
 \end{enumerate}
 \end{example}
 
