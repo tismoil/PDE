@@ -4,11 +4,12 @@ The top-level auxiliary file: PDE notes.aux
 A level-1 auxiliary file: Section1.aux
 A level-1 auxiliary file: Section2.aux
 A level-1 auxiliary file: Section3.aux
+A level-1 auxiliary file: Section4.aux
 The style file: abbrv.bst
 Database file #1: references.bib
 You've used 1 entry,
             2118 wiz_defined-function locations,
-            506 strings with 3863 characters,
+            507 strings with 3875 characters,
 and the built_in function-call counts, 255 in all, are:
 = -- 25
 > -- 7

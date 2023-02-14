@@ -1,0 +1,48 @@
+\section{The Heat Equation}
+Aytaylik $\Omega\subset \rd$ chegaralangan ochiq to`plam bo`lsin va $\partial\Omega$ Lipshitz uzliksiz. $C_0(\Omega)$ bilan $\overline{\Omega}$ da uzliksiz va $\partial\Omega$ to`plamda aynan nolga teng bo`lgan funksiyalar sinfini belgilab olamiz. Albatta $C_0(\Omega)\subset L^2(\Omega)$ bo`ladi. Ushbu sinfni sup-norma bilan birgalikda qarasak Banah fazosiga aylanadi va bunda $C_0(\Omega)\hookrightarrow L^2(\Omega)$ uzliksiz \textcolor{red}{akslantirish}.
+\subsection{The Laplacian on different domains}
+\begin{align}
+    &\left\{\begin{aligned}
+        D(B)&=\left\{u\in H_0^1(\Omega): \Delta u\in L^2(\Omega)\right\}\\
+        Bu&=\Delta u, \quad \forall u\in D(B)
+    \end{aligned}\right. \label[equation]{Bdefinition}\\
+    &\left\{\begin{aligned}
+        D(A)&=\left\{u\in H_0^1(\Omega)\cap C_0(\Omega): \Delta u\in C_0(\Omega)\right\}\\
+        Au&=\Delta u, \quad \forall u\in D(A)
+    \end{aligned}\right. \label[equation]{Adefinition}
+\end{align}
+\begin{proposition}
+    \eqref{Bdefinition} va \eqref{Adefinition} da aniqlangan $A$ va $B$ operatorlar quyidagi hossalarga ega.
+    \begin{enumerate}
+        \item $D(B)$ to`plam $L^2(\Omega)$ fazoda zich;
+        \item $B:D(B)\mapsto L^2(\Omega)$ o`z-o`ziga qo`shma operator;
+        \item $B\le 0$ ya`ni $B$ \textcolor{red}{dissipative} operator;
+        \item $D(A)$ to`plam $C_0(\Omega)$ fazoda zich;
+        \item $A:D(A)\mapsto C_0(\Omega)$ \textcolor{red}{m-dissipative} operator;
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    
+\end{proof}
+
+Lumer-Phillips teoremasiga ko`ra $A$ va $B$ operatorlarning har biri \textcolor{red}{siquvchi yarim-gruppalar generatori} bo`ladi. Biz bu yarim-grupplarni mos ravishda $\left\{T(t)\right\}_{t\ge 0}$ va $\left\{S(t)\right\}_{t\ge 0}$ bilan belgilab olamiz.
+
+\begin{proposition}
+    Ixtiyriy $\varphi\in C_0(\Omega)$ va $t\ge 0$ uchun $T(t)\varphi=S(t)\varphi$ tenglik o`rinli bo`ladi.
+\end{proposition}
+
+\subsection{The Semilinear Heat Equation}
+Aytaylik $F\in C\left(\r,\r\right)$ lokal Lipshitz uzliksiz funksiya va $F(0)=0$ bo`lsin. Biz $F\colon C_0(\Omega)\mapsto C_0(\Omega)$ akslantirishni quyidagicha aniqlaymiz:
+\begin{equation*}
+    F(u)(x)=F(u(x)),\quad \forall u\in C_0(\Omega), \; \forall x\in\Omega.
+\end{equation*}
+Bundan kelib chiqadiki $F\colon C_0(\Omega)\mapsto C_0(\Omega)$ ham lokal Lipshitz uz\-lik\-siz aks\-lan\-ti\-rish bo`ladi. 
+
+Berilgan $\varphi\in C_0(\Omega)$ funksiyalar uchun, biz shunday $T>0$ va quyidagi masalani qanoatlantiradigan $u\colon[0,T]\mapsto C_0(\Omega)$ funksiyani qidiramiz:
+
+\begin{empheq}[left=\empheqbiglbrace]{align}
+    &u\in C\left([0,T],C_0(\Omega)\right)\cap C\left((0,T], H_0^1(\Omega)\right)\cap C^1\left((0,T], L^2(\Omega)\right);\refstepcounter{equation}\tag{\theequation a}\label[equation]{classforsemilinearheat}\\
+    &\Delta u\in C\left((0,T], L^2(\Omega)\right);\tag{\theequation b} \label[equation]{laplacianheatsemilinear}\\
+    &u_t-\Delta u=F\left(u\right), \quad \forall t\in[0,T];\label[equation]{abstractsemilinearheat}\\
+    &u(0)=\varphi.\label[equation]{initaldatasemilinearheat}
+\end{empheq}

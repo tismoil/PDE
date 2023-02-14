@@ -7,3 +7,131 @@
 \subsubsection{Measurability and continuity}
 \subsection{Semigroup theory}
 \subsection{Hille-Yosida and related theorems}
+\subsection{The abstract problems}
+\subsubsection{The homogeneous abstract problem}
+Aytaylik $X$ Banah fazosi bo`lib $A:D(A)\mapsto X$ zich aniqlangan \textcolor{red}{m-dissipative} operator bo`lsin. Berilgan $x\in X$ uchun quyidagi shartlarni qanoatlantiruvchi $u\in C([0, +\infty), X)$ funksiyalarni qidiramiz:
+\begin{empheq}[left=\empheqlbrace]{align}
+    &u\in C\left((0, +\infty\right), D(A))\cap C^1\left((0,+\infty), X\right);\label[equation]{classforhomogeneouscase}\\
+    &u'(t)=Au(t),\quad \forall t>0;\label[equation]{abstracthomogeouspde}\\
+    &u(0)=x.\label[equation]{initaldatahomogeneous}
+\end{empheq}
+
+Albatta ixtiyoriy $x\in X$ uchun bunday funksiya topish murakkab masalaga aylanishi mumkin, lekin ayrim $x$ lar uchun yuqoridagi masalani soddagina yechishimiz mumkin. Bu\-ning uchun Lumer-Phillips teoremasining natijasi o`laroq $A$ operator ho\-sil qil\-gan $\left\{T(t)\right\}_{t\ge 0}$ si\-quv\-chi yarim-gruppadan foydalanishimiz mumkin.
+\begin{theorem}[Yechimning mavjudligi va yagonaligi]\label[theorem]{existuniqhomogeneous}
+    Istalgan $x\in D(A)$ uchun 
+    \begin{empheq}[left=\empheqlbrace]{align}
+        &u\in C\left([0, +\infty\right), D(A))\cap C^1\left([0,+\infty), X\right);\label[equation]{classforhomogeneouscase2}\\
+        &u'(t)=Au(t),\quad \forall t\ge0;\label[equation]{abstracthomogeouspde2}\\
+        &u(0)=x.\label[equation]{initaldatahomogeneous2}
+    \end{empheq}
+    abstrakt Koshi masalasining yagona yechimi mavjud bo`lib, ushbu yechim 
+    \begin{equation}
+        u(t)=T(t)x,\quad  t\ge 0
+    \end{equation}     
+    kabi aniqlangan funksiya  bo`ladi.
+\end{theorem}
+\begin{proof}
+    
+\end{proof}
+\newpage
+Gilbert fazolarida yuqoridagi natijani yanada yaxshilasa bo`ladi. Buni quyidagi teoremada ko`rishimiz mumkin.
+\begin{theorem}
+    Aytaylik $X$ haqiqiy sonlar ustidagi Gilbert fazo va $A\colon D(A)\mapsto X$ zich aniq\-lan\-gan operator. Aytaylik $A$ o`z-o`ziga qo`shma va manfiy aniqlangan operator. Ix\-ti\-yo\-riy $x\in X$ uchun $u(t)=T(t)x, \; t\ge 0$ kabi aniqlangan funksiya bo`lsin. U holda $u \in C\left([0,+\infty), X\right)$ va $u$ funksiya \eqref{classforhomogeneouscase}---\eqref{initaldatahomogeneous} Koshi masalasining yagona yechimi bo`ladi. Bundan tashqari, 
+    \begin{align}
+        \lVert Au(t)\rVert&\le \frac{1}{t\sqrt{2}}\lVert x\rVert,\\
+        -\langle Au(t), u(t)\rangle&\le \frac{1}{2t}\lVert x\rVert^2,\\
+\intertext{va agarda $x \in D(A)$}
+        \lVert Au(t)\rVert^2 &\le -\frac{1}{2t}\langle Ax,x\rangle.
+\end{align}   
+\end{theorem}
+\begin{proof}
+    
+\end{proof}
+\subsubsection{The non-homogeneous abstract problem}\label[paragraph]{nonhomoparagraph}
+Ushbu paragraf ichida $X$ Banah fazosi, $A\colon D(A)\mapsto X$ zich aniqlangan \textcolor{red}{m-dissipative} operator bo`lsin. $\left\{T(t)\right\}_{t\ge 0}$ bilan esa $A$ operator hosil qiladigan siquvchi yarim-gruppani belgilab olamiz.
+
+\noindent $T>0$ son va $f\colon[0,T]\mapsto X$ funksiya berilgan. Ixtiyoriy $x\in X$ uchun quyidagi abstract Koshi masalasini qaraylik:
+\begin{empheq}[left=\empheqbiglbrace]{align}
+    &u\in C\left([0,T],D(A)\right)\cap C^1\left([0,T], X\right);\label[equation]{classfornonhomogeneouscase}\\
+    &u'(t)=Au(t)+f(t), \quad \forall t\in[0,T];\label[equation]{abstractnonhomogeouspde}\\
+    &u(0)=x.\label[equation]{initaldatanonhomogeneous}
+\end{empheq}
+\begin{remark}
+    Teorema \ref{existuniqhomogeneous} dan ko`rinadiki bunday yechim yagona bo`lishga majbur. 
+\end{remark}
+Oddiy differensial tenglamalar kabi bu masalada ham biz Duhamel for\-mu\-la\-si\-ni kel\-ti\-ri\-shi\-miz mumkin. 
+\begin{lemma}[Duhamel's formula]\label[lemma]{duhamel}
+    Aytaylik $x\in D(A)$ va $f\in C\left([0,T],X\right)$. Agar $u\in C\left([0,T], D(A)\right)\cap C^1\left([0,T], X\right)$ funksiya \eqref{classfornonhomogeneouscase}---\eqref{initaldatanonhomogeneous} Koshi masalasining yechimi bo`lsa, u holda 
+    \begin{equation}\label[equation]{nonhomogeneousintegralform}
+        u(t)=T(t)x+\int_0^t T(t-s)f(s)\,ds, \quad \forall t\in[0,T].
+    \end{equation}
+\end{lemma}
+\begin{proof}
+    
+\end{proof}
+
+\begin{theorem}
+    Aytaylik $x\in D(A)$ va $f\in C\left([0,T], X\right)$. Agar 
+    \begin{enumerate}
+        \item $f\in L^1\left((0,T), D(A)\right)$;
+        \item $f\in W^{1,1}\left((0,T), X\right)$;
+    \end{enumerate}
+shartlarning birortasi o`rinli bo`lsa, \eqref{nonhomogeneousintegralform} bilan aniqlangan $u$ funksiya \eqref{classfornonhomogeneouscase}---\eqref{initaldatanonhomogeneous} Koshi masalasining yagona yechimi bo`ladi. 
+\end{theorem}
+\begin{proof}
+    
+\end{proof}
+\begin{corollary}
+Berilgan $x\in D(A)$ va $f\in C\left([0,T], X\right)$ lar uchun $u\colon [0,T]\mapsto X$ funksiya $\eqref{nonhomogeneousintegralform}$ bilan aniqlangan bo`lsin. Aytaylik quyidagilarning birortasi o`rinli: 
+    \begin{enumerate}
+        \item $u\in C\left((0,T), D(A)\right)$;
+        \item $u\in C^{1}\left((0,T), X\right)$.
+    \end{enumerate}
+U holda $u$ funksiya \eqref{classfornonhomogeneouscase}---\eqref{initaldatanonhomogeneous} Koshi masalasining yagona yechimi bo`ladi. 
+\end{corollary}
+
+\begin{lemma}[Gronwall's lemma]\label[lemma]{gronwall}
+    Biror $T>0$ son bo`lsin, aytaylik $\theta\in L^1(0,T)$ va $\theta\ge 0$ d.b. Agar biror $\varphi \in L^1(0,T), \varphi\ge 0$ funksiya uchun $\theta \varphi\in L^1(0,T)$ va 
+    \begin{equation*}
+        \varphi(t)\le C_1+C_2\int_{0}^{t}\theta(s)\varphi(s)\,ds,\quad d.b. t\in(0,T)
+    \end{equation*}  
+    o`rinli bo`lsa, quyidagi tengsizlik ham deyarli barcha $t\in (0,T)$ lar uchun o`rinli
+    \begin{equation*}
+        \varphi(t)\le C_1 e^{C_2\int_{0}^{t} \theta(s)\,ds}
+    \end{equation*}
+\end{lemma}
+\begin{proof}
+    
+\end{proof}
+\subsubsection{Semilinear abstract problems}
+Ushbu paragrafda ham \ref{nonhomoparagraph} paragrafdagi barcha belgilashlardan foydalanamiz.
+\begin{definition}
+    $F\colon X\mapsto X$ funksiya $X$ fazoda lokal Lipshitz uzliksiz deb aytiladi agar ixtiyoriy $M>0$ son uchun shunday $L(M)$ soni mavjud bo`lib 
+    \begin{equation*}
+        \lVert F(x)-F(y)\rVert\le L(M)\lVert x-y\rVert, \quad \forall x,y\in B_M(0)\footnotemark.
+    \end{equation*}\footnotetext{$B_M(0)=\left\{x\in X\colon \lVert x\rVert<M\right\}$}
+\end{definition}
+\vspace{-0.85cm}
+\begin{remark}
+    $L(M)$ soni $M$ soniga nisbatan funksiya deb qaralsa o`suvchi \textcolor{red}{(non-decreasing)} funksiya bo`ladi.
+\end{remark}
+ $F\colon X\mapsto X$ lokal Lipshitz uzliksiz funksiya bo`lsin. Berilgan $x\in X$ uchun biz shunday $T>0$ va quyidagi Koshi masalasini qa\-no\-at\-lan\-ti\-ra\-di\-gan $u\colon [0,T]\mapsto X$ funksiyalarni qidiramiz:
+ \begin{empheq}[left=\empheqbiglbrace]{align}
+    &u\in C\left([0,T],D(A)\right)\cap C^1\left([0,T], X\right);\label[equation]{classforsemilinearcase}\\
+    &u'(t)=Au(t)+F\left(u(t)\right), \quad \forall t\in[0,T];\label[equation]{abstractsemilinearpde}\\
+    &u(0)=x.\label[equation]{initaldatasemilinear}
+ \end{empheq} 
+ \begin{remark}
+    Agar $u\in C\left([0,T], X\right)$ funksiya \eqref{classforsemilinearcase}---\eqref{initaldatasemilinear} masalaning yechimi bo`lsa,  Lemma \ref{duhamel} ga ko`ra $u$ quyidagi integral tenglamaning ham yechimi bo`ladi:
+    \begin{equation}\label[equation]{semilinearintegralform}
+        u(t)=T(t)x+\int_0^t T(t-s)F(u(s))\,ds, \quad \forall t\in[0,T].
+    \end{equation}
+Bu faktdan va Lemma \ref{gronwall} dan foydalanib \eqref{classforsemilinearcase}---\eqref{initaldatasemilinear} Koshi masalasining yechimi ko`pi bilan bitta ekanligini ko`rishimiz mumkin.
+ \end{remark}
+
+ Dastlab biz \eqref{semilinearintegralform} masalaning yechimi ayrim holatlarda mavjud ekanligini keltiramiz va ushbu holatlarda yechimning qay darajada regulyar ekanligini o`rganamiz.
+
+ \begin{theorem}
+    $X$ refleksiv Banah fazosi bo`lsin. $T>0$ va $x\in X$ bo`lib $u\in C\left([0,T], X\right)$ funksiya \eqref{semilinearintegralform} masalaning yechimi bo`lsin. Agar $x\in D(A)$ bo`lsa, $u$ funksiya \eqref{classforsemilinearcase}---\eqref{initaldatasemilinear} Koshi masalasining yagona yechimi bo`ladi.
+ \end{theorem}
+ 
