@@ -41,8 +41,34 @@ Bundan kelib chiqadiki $F\colon C_0(\Omega)\mapsto C_0(\Omega)$ ham lokal Lipshi
 Berilgan $\varphi\in C_0(\Omega)$ funksiyalar uchun, biz shunday $T>0$ va quyidagi masalani qanoatlantiradigan $u\colon[0,T]\mapsto C_0(\Omega)$ funksiyani qidiramiz:
 
 \begin{empheq}[left=\empheqbiglbrace]{align}
-    &u\in C\left([0,T],C_0(\Omega)\right)\cap C\left((0,T], H_0^1(\Omega)\right)\cap C^1\left((0,T], L^2(\Omega)\right);\refstepcounter{equation}\tag{\theequation a}\label[equation]{classforsemilinearheat}\\
-    &\Delta u\in C\left((0,T], L^2(\Omega)\right);\tag{\theequation b} \label[equation]{laplacianheatsemilinear}\\
+    &u\in C\left([0,T],C_0(\Omega)\right)\cap C\left((0,T], H_0^1(\Omega)\right)\cap C^1\left((0,T], L^2(\Omega)\right);\label[equation]{classforsemilinearheat}\\
+    &\Delta u\in C\left((0,T], L^2(\Omega)\right);\label[equation]{laplacianheatsemilinear}\\
     &u_t-\Delta u=F\left(u\right), \quad \forall t\in[0,T];\label[equation]{abstractsemilinearheat}\\
     &u(0)=\varphi.\label[equation]{initaldatasemilinearheat}
 \end{empheq}
+
+Quyidagi teoremada biz \eqref{classforsemilinearheat}---\eqref{initaldatasemilinearheat} masalaning yechimi va unga mos integral teng\-la\-ma\-ning yechimi aynan bir xil bo`lishini ko`ramiz.
+
+\begin{theorem}
+    Aytaylik $\varphi \in C_0(\Omega)$, $T>0$ va $u\in C\left([0,T], C_0(\Omega)\right)$ bo`lsin. Bu holatda $u\colon [0,T]\mapsto C_0(\Omega)$ funksiya \eqref{classforsemilinearheat}---\eqref{initaldatasemilinearheat} masalaning yechimi bo`lishi uchun 
+    \begin{equation}\label[equation]{semilinearheatintegralform}
+        u(t)=T(t)\varphi +\int_{0}^{t} T(t-s)F\left(u(s)\right)\,ds,\quad \forall t\in [0,T]
+    \end{equation}
+    tenglik o`rinli bo`lishi zarur va yetarlidir.
+\end{theorem}
+
+\begin{proof}
+    
+\end{proof}
+
+Biz bilamizki \eqref{semilinearheatintegralform} tenglama lokal yechimga ega va agar ushbu yechimning normasi chegaralangan bo`lsa bu yechim global bo`lishga majbur. Shu faktdan foydalangan holda biz quyida bir nechta holatlarni o`rganamiz.
+
+Avvalo biz quyidagi maksimum prinsipini isbotalab olamiz.
+\begin{theorem}[Maksimum prinsipi]
+    $T>0$, $f\in C\left([0,T], C_0(\Omega)\right)$ va $\varphi\in C_0(\Omega)$ bo`lsin. Aytaylik $u \in C\left([0,T], C_0(\Omega)\right)\cap C\left((0,T), H_0^1(\Omega)\right)\cap C^1\left((0,T), L^2(\Omega)\right)$ va \hfill\break $\Delta u\in C\left((0,T), L^2(\Omega)\right)$ fuksiya uchun 
+    \begin{empheq}[left=\empheqbiglbrace]{align}
+        &u'(t)-\Delta u(t)= f(t), \quad \forall t\in (0,T);\\
+        &u(0)=\varphi.
+    \end{empheq}
+\end{theorem}
+
