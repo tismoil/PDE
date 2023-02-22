@@ -28,7 +28,7 @@ Aytaylik $\Omega\subset \rd$ chegaralangan ochiq to`plam bo`lsin va $\partial\Om
 Lumer-Phillips teoremasiga ko`ra $A$ va $B$ operatorlarning har biri \textcolor{red}{siquvchi yarim-gruppalar generatori} bo`ladi. Biz bu yarim-grupplarni mos ravishda $\left\{T(t)\right\}_{t\ge 0}$ va $\left\{S(t)\right\}_{t\ge 0}$ bilan belgilab olamiz.
 
 \begin{proposition}
-    Ixtiyriy $\varphi\in C_0(\Omega)$ va $t\ge 0$ uchun $T(t)\varphi=S(t)\varphi$ tenglik o`rinli bo`ladi.
+    Ixtiyoriy $\varphi\in C_0(\Omega)$ va $t\ge 0$ uchun $T(t)\varphi=S(t)\varphi$ tenglik o`rinli bo`ladi.
 \end{proposition}
 
 \subsection{The Semilinear Heat Equation}
@@ -65,10 +65,58 @@ Biz bilamizki \eqref{semilinearheatintegralform} tenglama lokal yechimga ega va 
 
 Avvalo biz quyidagi maksimum prinsipini isbotalab olamiz.
 \begin{theorem}[Maksimum prinsipi]
-    $T>0$, $f\in C\left([0,T], C_0(\Omega)\right)$ va $\varphi\in C_0(\Omega)$ bo`lsin. Aytaylik $u \in C\left([0,T], C_0(\Omega)\right)\cap C\left((0,T), H_0^1(\Omega)\right)\cap C^1\left((0,T), L^2(\Omega)\right)$ va \hfill\break $\Delta u\in C\left((0,T), L^2(\Omega)\right)$ fuksiya uchun 
+    $T>0$, $f\in C\left([0,T], C_0(\Omega)\right)$ va $\varphi\in C_0(\Omega)$ bo`lsin. Aytaylik $u \in C\left([0,T], C_0(\Omega)\right)\cap C\left((0,T), H_0^1(\Omega)\right)\cap C^1\left((0,T), L^2(\Omega)\right)$ va \hfill\break $\Delta u\in C\left((0,T), L^2(\Omega)\right)$ fuksiya 
     \begin{empheq}[left=\empheqbiglbrace]{align}
         &u'(t)-\Delta u(t)= f(t), \quad \forall t\in (0,T);\\
         &u(0)=\varphi.
     \end{empheq}
+masalaning yechimi bo`lsin. Aytaylik $f$ fuksiya 
+\begin{equation*}
+    \qquad\qquad\lvert f(t,x)\rvert\le C\lvert u(t,x)\rvert, \qquad \forall (t,x)\in (0,T)\times\Omega
+\end{equation*}
+shartni qanoalantirsin. U holda $\varphi\ge 0$ ekanligidan, $u(t)\ge 0$, $\forall t\in[0,T]$ o`rinli ekanligi kelib chiqadi. 
 \end{theorem}
 
+\begin{proof}
+    
+\end{proof}
+
+Yechimning global ekanligi uchun biz ikki turdagi shartlarni qaraymiz. Birinchisi $F$ funksiyaning cheksizlikdagi qiymatlarini baholash orqali va bunday holatda barcha boshlang`ich ma'lumotlar uchun yechim global ekanligini ko`rsatamiz. Ikkinchi tur natija esa $F$ funksiyani $0$ nuqta atrofidagi qiymatlarini baholash orqali \emph{kichik} boshlang'ich ma'lumotlar uchun yechim global bo`lishini ko`rsatamiz.
+\begin{theorem}\label[theorem]{firstglobalexistence}
+    Faraz qilaylik shunday $K, C<\infty$ sonlar mavjud bo`lib, $F$ funksiya uchun 
+    \begin{equation*}
+       \qquad \qquad xF(x)\le C\lvert x\rvert^2, \qquad \forall \lvert x\rvert\ge K
+    \end{equation*} 
+    o`rinli bo`lsin. U holda istalgan $\varphi \in C_0(\Omega)$ funksiya uchun \eqref{classforsemilinearheat}---\eqref{initaldatasemilinearheat} masalaning yagona global yechimi mavjud.
+\end{theorem}
+
+\begin{proof}
+    
+\end{proof}
+
+\begin{remark}
+    Yuqoridagi teoremadagi $C$ soni yetarlicha kichik bo`lsa, \eqref{classforsemilinearheat}---\eqref{initaldatasemilinearheat} masalaning global yechimini ham baholashimiz mumkin.
+\end{remark}
+
+Aytaylik $\lambda>0$ quyidagicha aniqlangan bo`lsin:
+\begin{equation}\label[equation]{minimumlambda}
+    \lambda=\min \left\{\int_{\Omega}\lvert\nabla u\rvert^2\,dx : u\in H_0^1(\Omega) \text{ va } \lVert u\rVert _{L^2}=1 \right\}
+\end{equation}
+\begin{theorem}
+    Agar Teorema \ref{firstglobalexistence} shartiga qo`shimcha $C<\lambda$ shartni faraz qilsak, ixtiyoriy $\varphi\in C_0(\Omega)$ funksiyaga mos keluvchi \eqref{classforsemilinearheat}---\eqref{initaldatasemilinearheat} Koshi masalasining global yechimi $u$ uchun 
+    \begin{equation*}
+        \sup\limits_{0\le t<\infty} \lVert u(t) \rVert _{C_0(\Omega)}<\infty
+    \end{equation*} 
+\end{theorem}
+\begin{proof}
+    
+\end{proof}
+
+Endi biz global yechim haqidagi ikkinchi tur natijalarni keltiramiz.
+\begin{theorem}
+    Aytaylik shunday $\mu<\lambda$ va $\alpha>0$ sonlar mavjud bo`lib, ular uchun 
+    \begin{equation*}
+      \qquad  x F(x)\le \mu \lvert x\rvert ^2,\qquad \forall \lvert x\rvert \le \alpha
+    \end{equation*}
+    o`rinli bo`lsin. U holda shunday $A\ge 1$ soni mavjudki, $\lVert \varphi \rVert _{C_0(\Omega)}\le \frac{\alpha}{A}$ shartni bajaruvchi ixtiyoriy $\varphi \in C_0(\Omega)$ uchun \eqref{classforsemilinearheat}---\eqref{initaldatasemilinearheat} Koshi masalasining yagona global yechimi mavjud.
+\end{theorem}
