@@ -100,7 +100,7 @@ Yuqorida aniqlangan $g$ funksiya yordamida biz juda ko`p kompakt dastakli sil\-l
 \end{equation*}
 kabi aniqlashimiz mumkin. Bu funksiyaning dastagi ese $\overline{B_1(0)}$---birlik yopiq shar bo`ladi.
 
-\item (\emph{Gaussian}) $g_\alpha : \rd \mapsto \r$ $(d\ge1)$ quyidagicha aniqlangan bo`lsin 
+\item (\emph{\textcolor{red}{Gaussian}}) $g_\alpha : \rd \mapsto \r$ $(d\ge1)$ quyidagicha aniqlangan bo`lsin 
 \begin{equation*}
     g_\alpha(x)=e^{-\alpha \lvert x\rvert^2}, \quad (\alpha>0).
 \end{equation*}
@@ -113,4 +113,27 @@ ixtiyoriy $\beta, \gamma\in \mathbb{N}_0^d$, multiindekslar uchun.
 \end{enumerate}
 \end{example}
 
- 
+\subsection{Topologies in the space of test functions}\textbf{Test funksiyalar fazolarida to\-po\-lo\-giya.}
+Biz yuqorida aniqlagan funkiyalar fazolarida qaysidir ma'noda yaqinlashish tushunchasi beramiz. Buning yordamida keyinchalik umumlashgan funksiayalar yohud taqsimotlarni aniqlashimiz mumkin bo`ladi.
+\subsubsection{$\mathscr{D}^n_K(\Omega)$ va $\mathscr{D}_K(\Omega)$ fazolarda yaqinlashish.} Yuqorida aniqlaganimiz kabi $K\subset \Omega$ kompakt qism to`plam va $n\in\n_0$ bo`lsin. $\left(f_m\right)_{m\in \n}$ ketma-ketlik $f\in \mathscr{D}^n_K(\Omega)$ funksiyaga $\mathscr{D}^n_K(\Omega)$ fazoda yaqinlashadi deyiladi, agar $|p|\le n$ shartni bajaruvchi ixtiyoriy multiindeks $p\in \n_0^d$ uchun $\left(\partial^p f_m \right)$ ketma-ketlik $\partial^p f$ funksiyaga $K$ to`plamda \emph{tekis yaqinlashsa}. Boshqacha qilib aytganda, 
+\begin{equation*}
+    \qquad\sup\limits_{x\in K}\lvert \partial^p f_n(x)-\partial^p f(x)\rvert\to 0,\qquad n\to \infty, \;\; \forall \lvert p\rvert\le n.
+\end{equation*}
+Huddi shu kabi $\mathscr{D}_K(\Omega)$ fazoda ham yaqinlashish tushunchasini aniqlay olamiz. Bu holatda biz $p$ multiindeks uchun hech qanday shart qo`ymaymiz. Ya'ni barcha multiindekslar uchun yuqoridagi ifoda yaqinlashishi kerak:
+\begin{equation*}
+    \qquad\sup\limits_{x\in K}\lvert \partial^p f_n(x)-\partial^p f(x)\rvert\to 0,\qquad n\to \infty, \;\; \forall p\in \n_0^d.
+\end{equation*}
+\subsubsection{$\mathscr{D}^n(\Omega)$ va $\mathscr{D}(\Omega)$ fazolarda yaqinlashish.}
+Huddi yuqoridagi kabi bu fazolarda ham yaqinlashish funksiyalar va ularning hosilalarining tekis yaqinlashishi orqali tushuniladi. Faqatgina bu fazolarda hamma ketma-ketliklar dastaglari ham bitta kompakt to`plamda bo`lishga majbur emas. Buni quyidagicha tushunish mumkin, aytaylik $f, \left(f_m\right)\in \mathscr{D}^n(\Omega)$ va biror bir $K\subset \Omega$ kompakt to`plam uchun 
+\begin{equation*}
+    \qquad\supp(f)\subseteq K \;\;\textnormal{ va }\;\; \supp(f_m)\subseteq K, \quad \forall m\in \n
+\end{equation*}
+o`rinli bo`lib, $\mathscr{D}_K^n(\Omega)$ fazoda  $\left(f_m\right)_{m\in \n}$ ketma-ketlik $f$ funksiyaga yaqinlashsa, $\left(f_m\right)_{m\in \n}$ ketma-ketlik $f$ funksiyaga $\mathscr{D}^n(\Omega)$ fazoda yaqinlashadi deyiladi. 
+
+Agar biz yuqoridagi ta'rifdan barcha $n$ larni o`chirsak, $\mathscr{D}(\Omega)$ fazoda ketma-ketliklar yaqinlashish ta'rifini hosil qilamiz. Takidlaganimizdek, bu fazolarda tekis yaqinlashish qaralayotgan kompakt to`plam har bir ketma-ketlikka bog`liq ravishda o`zgaradi.
+\subsubsection{$\mathscr{E}^n(\Omega)$ va $\mathscr{E}(\Omega)$ fazolarda yaqinlashish.}
+Anglaganingiz kabi bu fazolarda yaqinlashish shartlari yanada ko`proq bo`lishi kerak. Yuqoridagi fazolardan farqli o`laroq bu fazolardagi funksiyalar kompakt dastakli bo`lishga majbur emas. Aytaylik $f, \left(f_m\right)\in \mathscr{E}^n(\Omega)$. Agar istalgan $K\subset \Omega$ kompakt to`plam va istalgan $p\in \n_0^d$, $\lvert p\rvert \le n$ multiindekslar uchun, $\left(\partial ^p f_m\right)_{m\in \n}$ ketma-ketlik $\partial ^p f$ funksiyaga, $K$ to`plamda tekis yaqinlashsa,  $\left(f_m\right)_{m\in \n}$ ketma-ketlik $f$ funksiyaga $\mathscr{E}^n(\Omega)$ fazoda yaqinlashadi deyiladi. 
+
+Agar yuqoridagi ta'rifdan barcha $n$ larni va $p$ multiindeksga qo`yilgan shartni olib tashlasak $\mathscr{E}(\Omega)$ fazoda yaqinlashish ta'rifini hosil qilamiz.
+
+\subsection{Convolution and Dirac sequences}

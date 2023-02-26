@@ -114,9 +114,13 @@ Aytaylik $\lambda>0$ quyidagicha aniqlangan bo`lsin:
 
 Endi biz global yechim haqidagi ikkinchi tur natijalarni keltiramiz.
 \begin{theorem}
-    Aytaylik shunday $\mu<\lambda$ va $\alpha>0$ sonlar mavjud bo`lib, ular uchun 
+    Aytaylik shunday $0\le\mu<\lambda$ va $\alpha>0$ sonlar mavjud bo`lib, ular uchun 
     \begin{equation*}
       \qquad  x F(x)\le \mu \lvert x\rvert ^2,\qquad \forall \lvert x\rvert \le \alpha
     \end{equation*}
-    o`rinli bo`lsin. U holda shunday $A\ge 1$ soni mavjudki, $\lVert \varphi \rVert _{C_0(\Omega)}\le \frac{\alpha}{A}$ shartni bajaruvchi ixtiyoriy $\varphi \in C_0(\Omega)$ uchun \eqref{classforsemilinearheat}---\eqref{initaldatasemilinearheat} Koshi masalasining yagona global yechimi mavjud.
+    o`rinli bo`lsin. U holda shunday $A\ge 1$ soni mavjudki, $\lVert \varphi \rVert _{C_0(\Omega)}< \frac{\alpha}{A}$ shartni bajaruvchi ixtiyoriy $\varphi \in C_0(\Omega)$ uchun \eqref{classforsemilinearheat}---\eqref{initaldatasemilinearheat} Koshi masalasining yagona global yechimi $u$, mavjud. Qolaversa, $u$ funksiya uchun
+    \begin{equation*}
+        \lVert u(t)\rVert _{C_0(\Omega)}\le A \lVert \varphi \rVert _{C_0(\Omega)} e^{(\mu-\lambda)t}, \qquad t\ge 0
+    \end{equation*} 
+    o`rinli bo`ladi.
 \end{theorem}
